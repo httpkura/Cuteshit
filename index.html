@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Journey 💖</title>
+    <style>
+        body {
+            background-color: pink;
+            background-image: url('https://i.imgur.com/q4Fev6A.jpg'); /* Replace with a bear and hearts background */
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        .container {
+            margin-top: 100px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .question {
+            font-size: 2em;
+            color: red;
+        }
+        .btn {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        .yes {
+            background-color: green;
+            color: white;
+        }
+        .no {
+            background-color: red;
+            color: white;
+        }
+        .love-message, #question2, #question3 {
+            display: none;
+        }
+        .roses {
+            display: none;
+            font-size: 2em;
+        }
+        .hearts {
+            position: absolute;
+            top: -50px;
+            font-size: 2em;
+            animation: float 5s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-600px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="question1">
+        <p class="question">Will you go out with me? 🌹</p>
+        <button class="btn yes" onclick="yesClicked1()">Yes</button>
+        <button class="btn no" id="noButton1" onclick="noClicked1()">No</button>
+        <div class="roses" id="roses1">🌹🌹🌹🌹🌹</div>
+    </div>
+
+    <div class="container" id="question2">
+        <p class="question">Are you a monkey? 🐵</p>
+        <button class="btn yes" onclick="yesClicked2()">Yes</button>
+        <button class="btn yes" onclick="yesClicked2()">Yes</button>
+    </div>
+
+    <div class="container" id="question3">
+        <p class="question">I love you! 💖💖💖</p>
+        <div>
+            <img src="https://i.pinimg.com/originals/4e/ff/4b/4eff4b7bdf5079c69ebf0b3a5f6eead1.jpg" alt="Shrek Love" width="200">
+            <img src="https://media1.tenor.com/m/c-8LONq7RPkAAAAC/hearts-love.gif" alt="Hearts">
+            <img src="https://media1.tenor.com/m/IUbkU8ddZ9wAAAAd/love-you-hearts.gif" alt="Love GIF">
+        </div>
+    </div>
+
+    <script>
+        let noSize = 1.5;
+
+        function noClicked1() {
+            let noBtn = document.getElementById('noButton1');
+            noSize *= 0.8;
+            noBtn.style.fontSize = noSize + 'em';
+            if (noSize < 0.5) {
+                noBtn.disabled = true;
+                noBtn.innerText = "You can't say No! 😆";
+            }
+        }
+
+        function yesClicked1() {
+            document.getElementById('roses1').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('question1').style.display = 'none';
+                document.getElementById('question2').style.display = 'block';
+            }, 1000);
+        }
+
+        function yesClicked2() {
+            document.getElementById('question2').style.display = 'none';
+            document.getElementById('question3').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
