@@ -13,7 +13,7 @@
             position: relative;
         }
         .container {
-            margin-top: 100px;
+            margin-top: 20px;
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
@@ -55,11 +55,16 @@
             0% { transform: translateY(0); opacity: 1; }
             100% { transform: translateY(-600px); opacity: 0; }
         }
+        .image-container {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <div id="question1">
-        <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/bear1.gif" alt="Bear Love 1" width="300"><br>
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/bear1.gif" alt="Bear Love 1" width="300">
+        </div>
         <div class="container">
             <p class="question">Will you go out with me? 🌹</p>
             <button class="btn yes" onclick="yesClicked1()">Yes</button>
@@ -69,7 +74,9 @@
     </div>
 
     <div id="question2" style="display: none;">
-        <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/bear2.gif" alt="Bear Love 2" width="300"><br>
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/bear2.gif" alt="Bear Love 2" width="300">
+        </div>
         <div class="container">
             <p class="question">Are you a monkey? 🐵</p>
             <button class="btn yes" onclick="yesClicked2()">Yes</button>
@@ -78,13 +85,13 @@
     </div>
 
     <div id="question3" style="display: none;">
-        <div>
+        <div class="image-container">
             <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/cat-dance-dancing-cat.gif" alt="Dancing Cat" width="200">
             <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/cat-love.gif" alt="Cat Love" width="200">
         </div>
         <div class="container">
             <p class="question">I love you! 💖💖💖</p>
-            <div>
+            <div class="image-container">
                 <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/love.gif" alt="Love GIF" width="250">
                 <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/rabbit-love.gif" alt="Rabbit Love" width="250">
             </div>
