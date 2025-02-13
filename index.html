@@ -13,15 +13,18 @@
             position: relative;
         }
         .container {
-            margin-top: 20px;
+            margin-top: 0;
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
             display: inline-block;
+            position: relative;
+            width: 60%;
         }
         .question {
             font-size: 2em;
             color: red;
+            margin-top: 0;
         }
         .btn {
             font-size: 1.5em;
@@ -56,7 +59,23 @@
             100% { transform: translateY(-600px); opacity: 0; }
         }
         .image-container {
-            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: -10px;
+        }
+        .image-container img {
+            display: block;
+            max-width: 100%;
+        }
+        .side-images {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .side-images img {
+            width: 150px;
         }
     </style>
 </head>
@@ -89,13 +108,13 @@
             <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/cat-dance-dancing-cat.gif" alt="Dancing Cat" width="200">
             <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/cat-love.gif" alt="Cat Love" width="200">
         </div>
-        <div class="container">
-            <p class="question">I love you! 💖💖💖</p>
-            <div class="image-container">
-                <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/love.gif" alt="Love GIF" width="250">
-                <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/rabbit-love.gif" alt="Rabbit Love" width="250">
+        <div class="side-images">
+            <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/love.gif" alt="Love GIF">
+            <div class="container">
+                <p class="question">I love you! 💖💖💖</p>
+                <p>Happy Valentine's Day! 💖</p>
             </div>
-            <p>Happy Valentine's Day! 💖</p>
+            <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/rabbit-love.gif" alt="Rabbit Love">
         </div>
     </div>
 
