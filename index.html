@@ -13,20 +13,22 @@
             position: relative;
         }
         .container {
-            margin-top: 0;
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: inline-block;
             width: 60%;
-            margin: 0 auto;
+            margin: 10px auto 0;
         }
         .question {
             font-size: 2em;
             color: red;
-            margin: 0;
+            margin-bottom: 20px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
         }
         .btn {
             font-size: 1.5em;
@@ -46,37 +48,30 @@
         .love-message, #question2, #question3 {
             display: none;
         }
-        .roses {
-            display: none;
-            font-size: 2em;
-        }
-        .hearts {
-            position: absolute;
-            top: -50px;
-            font-size: 2em;
-            animation: float 5s infinite linear;
-        }
-        @keyframes float {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(-600px); opacity: 0; }
-        }
         .image-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: -10px;
         }
         .image-container img {
             display: block;
             max-width: 100%;
         }
-        .side-images {
+        .final-images {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
+            width: 100%;
         }
-        .side-images img {
-            width: 150px;
+        .final-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -87,8 +82,10 @@
         </div>
         <div class="container">
             <p class="question">Will you go out with me? 🌹</p>
-            <button class="btn yes" onclick="yesClicked1()">Yes</button>
-            <button class="btn no" id="noButton1" onclick="noClicked1()">No</button>
+            <div class="btn-container">
+                <button class="btn yes" onclick="yesClicked1()">Yes</button>
+                <button class="btn no" id="noButton1" onclick="noClicked1()">No</button>
+            </div>
             <div class="roses" id="roses1">🌹🌹🌹🌹🌹</div>
         </div>
     </div>
@@ -107,15 +104,17 @@
     <div id="question3" style="display: none;">
         <div class="image-container">
             <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/cat-dance-dancing-cat.gif" alt="Dancing Cat" width="200">
-            <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/cat-love.gif" alt="Cat Love" width="200">
         </div>
-        <div class="side-images">
-            <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/love.gif" alt="Love GIF">
-            <div class="container">
-                <p class="question">I love you! 💖💖💖</p>
-                <p>Happy Valentine's Day! 💖</p>
+        <div class="final-images">
+            <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/love.gif" alt="Love GIF" width="150">
+            <div class="final-container">
+                <p class="question">i love you! 💖💖💖</p>
+                <p>happy valentine's day! 💖</p>
             </div>
-            <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/rabbit-love.gif" alt="Rabbit Love">
+            <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/rabbit-love.gif" alt="Rabbit Love" width="150">
+        </div>
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/httpkura/Cuteshit/main/cat-love.gif" alt="Cat Love" width="200">
         </div>
     </div>
 
